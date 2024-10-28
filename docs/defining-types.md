@@ -8,7 +8,7 @@ For this tutorial, you need one type definition. The type will define an enumera
 
 ## In this section 
 
-In this section, you will create a `Types` directory and add it to the project build. You will create an enumeration to represent several Mathmatic operations.
+In this section, you will create a `Types` directory and add it to the project build. You will create an enumeration to represent several mathematical operations.
 
 ## Setup 
 
@@ -20,7 +20,7 @@ mkdir Types
 cd Types
 ``` 
 
-The user defines types in an fpp (F prime prime) file. Use the the command below to create an empty fpp file to define the `MathOp` type:
+The user defines types in an fpp (F prime prime) file. Use the command below to create an empty fpp file to define the `MathOp` type:
 
 ```shell 
 # In: Types
@@ -47,7 +47,7 @@ module MathModule {
 ```
 > Important note: think of modules similar to a cpp namespace. Whenever you want to make use of the enumeration, `MathOp`, you will need to use the MathModule module. 
 
-Above you have created an enumation of the four math types that are used in this tutorial.
+Above you have created an enumeration of the four math types that are used in this tutorial.
 
  
 ## Adding to the Build 
@@ -84,7 +84,7 @@ Edit `project.cmake`, located in the `MathProject` directory, and  **add** the f
 add_fprime_subdirectory("${CMAKE_CURRENT_LIST_DIR}/Types/")
 ```
 
-The `Types` directory should now build without any issues. Test the build with the following commmand before moving forward.
+The `Types` directory should now build without any issues. Test the build with the following command before moving forward.
 
 ```shell 
 # In: Types 
@@ -95,7 +95,7 @@ fprime-util build
 
 The output should indicate that the model built without any errors. If not, try to identify and correct what is wrong, either by deciphering the error output, or by going over the steps again. If you get stuck, you can look at the [reference implementation](https://github.com/fprime-community/fprime-tutorial-math-component).
 
-> The advanced user may want to go inspect the generated code. Go to the directory `MathProject/build-fprime-automatic-native/MathTypes`. The directory `build-fprime-automatic-native` is where all the generated code lives for the "automatic native" build of the project. Within that directory is a directory tree that mirrors the project structure. In particular, `build-fprime-automatic-native/MathTypes` contains the generated code for `MathTypes`.
+> The advanced user may want to go inspect the generated code. Go to the directory `MathProject/build-fprime-automatic-native/Types`. The directory `build-fprime-automatic-native` is where all the generated code lives for the "automatic native" build of the project. Within that directory is a directory tree that mirrors the project structure. In particular, `build-fprime-automatic-native/Types` contains the generated code for `Types`.
 >The files MathOpEnumAc.hpp and MathOpEnumAc.cpp are the auto-generated C++ files corresponding to the MathOp enum. You may wish to study the file MathOpEnumAc.hpp. This file gives the interface to the C++ class MathModule::MathOp. All enum types have a similar auto-generated class interface.
 
 ## Summary  

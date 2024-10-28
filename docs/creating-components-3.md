@@ -6,7 +6,7 @@ In this section you will begin creating `MathReceiver` following the same steps 
 
 ## Component Description
 
-The `MathReceiver` is a queued component which receives parameters, send parameters, logs events, and sends telemetry. With this is mind, use the following command to create the `MathReceiver` component. 
+The `MathReceiver` is a queued component which receives parameters, sends parameters, logs events, and sends telemetry. With this is mind, use the following command to create the `MathReceiver` component. 
 
 ## Creating the MathReceiver
 
@@ -224,12 +224,12 @@ Generate cpp and hpp files based off your `MathReceiver` by using:
 fprime-util impl
 ```
 
-Replace the orginal cpp and hpp files with the ones you just created:
+Replace the original cpp and hpp files with the ones you just created:
 
 ```shell 
 # In: MathReceiver
-mv MathReceiver.cpp-template MathReceiver.cpp
-mv MathReceiver.hpp-template MathReceiver.hpp
+mv MathReceiver.template.cpp MathReceiver.cpp
+mv MathReceiver.template.hpp MathReceiver.hpp
 ```
 
 Test the build:
@@ -242,7 +242,7 @@ fprime-util build
 ## Summary
 You are two thirds of the way through finishing `MathReceiver`.
 So far, you have created a queued component stub, filled in the fpp 
-file, and wrote component charactaristics in `MathReceiver.fpp`. Next,
+file, and wrote component characteristics in `MathReceiver.fpp`. Next,
 you will write the behavior for `MathReceiver`.
 
 **Next:** [Creating Components Part 4: Implementing MathReceiver Behavior](./creating-components-4.md)
